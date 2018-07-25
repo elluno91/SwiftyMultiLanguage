@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import SwiftyMultiLanguage
 
 class ViewController: UIViewController {
-
+    
+    var language : Language = Language()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
+        print(Language.getLanguage(language: "All Deal"))
+        
     }
 
     override func didReceiveMemoryWarning() {

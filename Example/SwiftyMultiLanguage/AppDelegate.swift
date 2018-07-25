@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import SwiftyMultiLanguage
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var languageBuilder : LanguageBuilder = LanguageBuilder()
+    var language : Language = Language()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        languageBuilder.setAvailableLanguage(listLanguage: ["id","en"])
+        languageBuilder.setDownloadURL(downloadURL: "http://membership.app.ittron.co.id/lang/pack/")
+        Language.setMainLanguage(language: "en")
+        Language.build(languageBuilder: languageBuilder)
+        
         return true
     }
 

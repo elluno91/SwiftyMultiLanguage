@@ -1,0 +1,6 @@
+framework module Pods_SwiftyMultiLanguage_Example {
+  umbrella header "Pods-SwiftyMultiLanguage_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
